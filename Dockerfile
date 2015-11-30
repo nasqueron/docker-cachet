@@ -16,7 +16,6 @@ WORKDIR /var/wwwroot/default
 RUN git init && git remote add origin https://github.com/cachethq/Cachet.git && \
     git fetch && git checkout -t origin/master && \
     composer install --no-dev -o && \
-    php artisan migrate && \
     chown -R app:app /var/wwwroot/default
 
 #
