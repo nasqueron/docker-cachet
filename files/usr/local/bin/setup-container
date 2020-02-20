@@ -6,7 +6,7 @@ if [ -z "$NO_INSTALL" ]; then
 	php artisan migrate --force
 	php artisan key:generate
 	php artisan config:cache
-	chown app:app /var/wwwroot/default
+	chown -R app:app /var/wwwroot/default
 fi
 
 # We're done
