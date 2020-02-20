@@ -2,7 +2,7 @@
 # Nasqueron - Cachet image
 #
 
-FROM nasqueron/nginx-php-fpm:novolume
+FROM nasqueron/nginx-php7-fpm:novolume-7.3
 MAINTAINER Sébastien Santoro aka Dereckson <dereckson+nasqueron-docker@espace-win.org>
 
 #
