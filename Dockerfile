@@ -23,4 +23,3 @@ RUN git init && git remote add origin https://github.com/cachethq/Cachet.git && 
 #
 
 CMD ["/usr/local/sbin/init-container"]
-
