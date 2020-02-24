@@ -4,8 +4,7 @@ pushd /var/wwwroot/default
 
 if [ -z "$NO_INSTALL" ]; then
 	php artisan migrate --force
-	php artisan key:generate
-	php artisan config:cache
+	echo n | php artisan cachet:install
 	chown -R app:app /var/wwwroot/default
 fi
 
