@@ -1,5 +1,16 @@
 #!/bin/sh
 
+if [ -z "$APP_KEY" ]; then
+	echo "You must set APP_KEY environment variable when running this container."
+	echo
+	echo "This key would be dangerous to set automatically as you need it to stay"
+	echo "the same in production to avoid loss of encrypted and hashed data."
+	echo
+	echo "You can do so adding this argument to your container run command:"
+	echo "-e \"APP_KEY=$(openssl rand -base64 36)\""
+	exit 1
+fi
+
 if [ ! -f .initialized ]; then
 	# Container is initialized according the environment variables
 	# passed to the container to setup the application.
