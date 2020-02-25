@@ -7,7 +7,7 @@ if [ -z "$APP_KEY" ]; then
 	echo "the same in production to avoid loss of encrypted and hashed data."
 	echo
 	echo "You can do so adding this argument to your container run command:"
-	echo "-e \"APP_KEY=$(openssl rand -base64 36)\""
+	echo "-e \"APP_KEY=$(php artisan key:generate --show)\""
 	exit 1
 fi
 
